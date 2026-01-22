@@ -1,54 +1,77 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Arial, sans-serif;
   background: #f4f6f8;
   color: #333;
 }
 
-header {
-  background: #0a2540;
+.hero {
+  background: linear-gradient(135deg, #0a2540, #102a43);
   color: white;
-  padding: 40px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-header h1 {
-  margin-bottom: 10px;
-}
-
-.links a {
-  color: #ffffff;
-  margin: 0 10px;
+.btn {
+  background: #ffb703;
+  color: #000;
+  padding: 12px 20px;
+  margin: 10px;
   text-decoration: none;
   font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  color: white;
+  padding: 10px 18px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
 section {
-  background: #ffffff;
-  margin: 20px auto;
-  padding: 25px;
   max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
   border-radius: 8px;
 }
 
-h2 {
-  color: #0a2540;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 5px;
-}
-
-h3 {
-  color: #333;
-  margin-top: 20px;
-}
-
-ul {
-  line-height: 1.8;
+.card {
+  background: #eef3f8;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 5px solid #0a2540;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background: #eaeaea;
-  margin-top: 30px;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  animation: fade 1s forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+
+@keyframes fade {
+  to { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
